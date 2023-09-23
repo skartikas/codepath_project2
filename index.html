@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+    }
+    .card {
+      color: white;
+      font-size: smaller;
+      background-color: black;
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      width: 500px;
+      height: 250px;
+      border-radius: 0.75rem;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .pink {
+      color: #ff1ead;
+      font-size: smaller;
+    }
+    .image {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .info-sub {
+      margin-right: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .info-sub-parent {
+      display: flex;
+    }
+    .hero {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      color: #ff1ead;
+    }
+    h1 {
+      color: #ff1ead;
+    }
+    button {
+      width: 200px;
+      background-color: black;
+      color: white;
+      border: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      color: white;
+      margin-top: 50px;
+    }
+    strong {
+      color: white;
+    }
+    a {
+      text-decoration: none;
+    }
+
+   .card:hover{
+    border: 1px solid white;
+    background-color: #ff1ead;
+    opacity: 100%;
+ }
+
+  </style>
+  <body>
+    <nav>
+      <h2><strong>Tech Companies</strong></h2>
+    </nav>
+    <div class="hero">
+      <h1>Top Tech Companies based on revenue in the fiscal year 2020.</h1>
+       <a href="/"><button href="/">All Companies</button></a>
+    </div>
+    <div class="container">
+      <template>
+        <a>
+        <div class="card">
+          <div class="image">
+            <img width="200" src="" alt="" />
+          </div>
+          <div class="info">
+            <div class="info-sub-parent">
+              <div class="info-sub name">
+                Apple
+                <p class="pink">Company</p>
+              </div>
+              <div class="head">
+                Menlo Park, CA
+                <p class="pink">Headquarters</p>
+              </div>
+            </div>
+
+            <div class="details">
+              More infomration
+              <p class="pink">Details</p>
+            </div>
+          </div>
+        </div>
+        </a>
+      </template>
+      
+    <script>
+      temp = document.getElementsByTagName("template")[0];
+      let myArr = ["Audi", "BMW", "Ford", "Honda", "Jaguar", "Nissan"];
+
+      const renderCard = (name, headquarters, details, src, id) => {
+         let temp = document.getElementsByTagName("template")[0];
+        let clon = temp.content.cloneNode(true);
+        let img = clon.querySelector("img");
+        img.src = src;
+        let detailsDiv = clon.querySelector(".details");
+        detailsDiv.innerHTML = details + "<p class='pink'>Details</p>";
+
+        let nameDiv = clon.querySelector(".name");
+        nameDiv.innerHTML = name + "<p class='pink'>Company</p>";
+
+        let head = clon.querySelector(".head");
+        head.innerHTML = headquarters + "<p class='pink'>Headquarters</p>";
+
+        let click = clon.querySelector("a");
+        click.href = "/company/" + id;
+        document.querySelector(".container").appendChild(clon);
+      }
+
+     
+      fetch('/api/all').then(res => res.json()).then(data => {
+        if (data && data.length > 0){
+            data.map((ele) => {
+              renderCard(ele.Company, ele.Headquarters, ele.KeyHighlights.slice(0, 50) + "...", ele.Logo, ele.Id)
+            })
+        }
+      }).catch(err => {
+        console.log(err)
+      })
+    </script>
+  </body>
+</html>

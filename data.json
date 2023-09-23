@@ -1,0 +1,104 @@
+[
+  {
+    "Id": 0,
+    "Company": "Apple Inc.",
+    "Revenue": "$274.5 billion",
+    "Headquarters": "Cupertino, California, USA",
+    "CEO": "Tim Cook",
+    "Founded": "April 1, 1976",
+    "Founders": ["Steve Jobs", "Steve Wozniak", "Ronald Wayne"],
+    "Logo": "https://www.tailorbrands.com/wp-content/uploads/2021/01/apple_logo_1988.jpg",
+    "Products": [
+      "iPhone",
+      "iPad",
+      "Mac",
+      "Apple Watch",
+      "Apple TV",
+      "iOS",
+      "macOS"
+    ],
+    "MarketCap": "Over $2 trillion",
+    "Employees": "Approximately 147,000",
+    "KeyHighlights": "Apple is known for its iconic products, including the iPhone, iPad, and Mac. The company also has a strong ecosystem of services like the App Store, Apple Music, and iCloud. In recent years, services have become a significant source of revenue growth for Apple."
+  },
+  {
+    "Id": 1,
+    "Company": "Samsung Electronics",
+    "Revenue": "$196 billion",
+    "Headquarters": "Suwon, South Korea",
+    "CEO": "Kinam Kim",
+    "Founded": "1969",
+    "Logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_2.png?$568_N_PNG$",
+    "Products": [
+      "Consumer electronics",
+      "mobile devices",
+      "semiconductors",
+      "displays",
+      "and more"
+    ],
+    "MarketCap": "Over $320 billion",
+    "Employees": "Approximately 287,000",
+    "KeyHighlights": "Samsung is a diversified conglomerate with a strong presence in consumer electronics. It's a major player in the smartphone market and a leading manufacturer of semiconductors, including memory chips."
+  },
+  {
+    "Id": 2,
+    "Company": "Microsoft",
+    "Revenue": "$143 billion",
+    "Headquarters": "Redmond, Washington, USA",
+    "CEO": "Satya Nadella",
+    "Founded": "April 4, 1975",
+    "Founders": ["Bill Gates", "Paul Allen"],
+    "Logo": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true",
+    "Products": [
+      "Windows",
+      "Office Suite",
+      "Azure cloud services",
+      "Xbox",
+      "Surface devices"
+    ],
+    "MarketCap": "Over $2 trillion",
+    "Employees": "Approximately 181,000",
+    "KeyHighlights": "Microsoft is a leader in software and cloud services. Azure is a major player in the cloud computing industry, and the company continues to expand its services and products for both consumers and enterprises."
+  },
+  {
+    "Id": 3,
+    "Company": "Alphabet Inc.",
+    "Revenue": "$182.5 billion",
+    "Headquarters": "Mountain View, California, USA",
+    "CEO": "Sundar Pichai",
+    "Founded": "September 4, 1998",
+    "Founders": ["Larry Page", "Sergey Brin"],
+    "Logo": "https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg",
+
+    "Products": [
+      "Google Search",
+      "Android",
+      "Google Ads",
+      "Google Cloud",
+      "YouTube"
+    ],
+    "MarketCap": "Over $1.7 trillion",
+    "Employees": "Approximately 156,500",
+    "KeyHighlights": "Google is a dominant player in online search and advertising. It also offers cloud computing services through Google Cloud and owns YouTube, the world's largest video-sharing platform."
+  },
+  {
+    "Id": 4,
+    "Company": "Meta Platforms, Inc.",
+    "Revenue": "$85.97 billion",
+    "Headquarters": "Menlo Park, California, USA",
+    "CEO": "Mark Zuckerberg",
+    "Founded": "February 4, 2004",
+    "Logo": "https://cdn.worldvectorlogo.com/logos/meta-1.svg",
+    "Founders": [
+      "Mark Zuckerberg",
+      "Andrew McCollum",
+      "Eduardo Saverin",
+      "Chris Hughes",
+      "Dustin Moskovitz"
+    ],
+    "Products": ["Facebook", "Instagram", "WhatsApp", "Oculus VR"],
+    "MarketCap": "Over $900 billion",
+    "Employees": "Approximately 58,600",
+    "KeyHighlights": "Facebook is a social media giant with a portfolio of popular social platforms. It also ventured into virtual reality with Oculus VR."
+  }
+]
