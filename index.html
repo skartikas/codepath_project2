@@ -155,7 +155,7 @@
       fetch('/api/all').then(res => res.json()).then(data => {
         if (data && data.length > 0){
             data.map((ele) => {
-              renderCard(ele.Company, ele.Headquarters, ele.KeyHighlights.slice(0, 50) + "...", ele.Logo, ele.Id)
+              renderCard(ele.company, ele.headquarters, ele.keyhighlights.slice(0, 50) + "...", ele.logo, ele.id)
             })
         }
       }).catch(err => {

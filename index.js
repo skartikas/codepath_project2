@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const pool = require("./config/database");
 const fs = require("fs");
+require("dotenv").config({ path: "./.env" });
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -11,14 +13,15 @@ app.get("/company/:id", (req, res) => {
   res.sendFile(__dirname + "/company.html");
 });
 app.get("/api/info/:id", (req, res) => {
-  fs.readFile("./data.json", "utf8", (error, data) => {
-    if (error) {
+  const query = "SELECT * FROM companies";
+
+  pool.query(query, (err, data) => {
+    if (err) {
       console.log(error);
       res.status(500).send({ error: "Cannot read data file" });
       return;
     }
-    const companies = JSON.parse(data);
-
+    const companies = data.rows;
     if (req.params.id <= companies.length) {
       res.status(200).send(companies[req.params.id]);
     } else {
@@ -29,14 +32,15 @@ app.get("/api/info/:id", (req, res) => {
 });
 
 app.get("/api/all", (req, res) => {
-  fs.readFile("./data.json", "utf8", (error, data) => {
-    if (error) {
+  const query = "SELECT * FROM companies";
+
+  pool.query(query, (err, data) => {
+    if (err) {
       console.log(error);
       res.status(500).send({ error: "Cannot read data file" });
       return;
     }
-    const companies = JSON.parse(data);
-
+    const companies = data.rows;
     res.status(200).send(companies);
   });
 });

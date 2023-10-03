@@ -103,15 +103,15 @@
             throw err;
         }
         if(data){
-            document.querySelector("img").src = data.Logo;
+            document.querySelector("img").src = data.logo;
             for(const key in data){
                 let temp = document.createElement('p');
                 if(Array.isArray(data[key])){
-                     temp.innerHTML = key + ": " + "<span class='pink'>" + data[key].toString() + "</span>"
+                     temp.innerHTML = key.charAt(0).toUpperCase() + key.slice(1)  + ": " + "<span class='pink'>" + data[key].toString() + "</span>"
                 }
                 else{
-                    if(key != "Logo" && key != "Id"){
-                        temp.innerHTML = key + ": " + "<span class='pink'>" + data[key] + "</span>"
+                    if(key != "logo" && key != "id"){
+                        temp.innerHTML = key.charAt(0).toUpperCase() + key.slice(1)+ ": " + "<span class='pink'>" + data[key] + "</span>"
                     }
                 }
                 container.appendChild(temp)

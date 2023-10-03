@@ -28,6 +28,7 @@
     "Headquarters": "Suwon, South Korea",
     "CEO": "Kinam Kim",
     "Founded": "1969",
+    "Founders": ["Kinam Kim"],
     "Logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_2.png?$568_N_PNG$",
     "Products": [
       "Consumer electronics",
@@ -88,7 +89,6 @@
     "Headquarters": "Menlo Park, California, USA",
     "CEO": "Mark Zuckerberg",
     "Founded": "February 4, 2004",
-    "Logo": "https://cdn.worldvectorlogo.com/logos/meta-1.svg",
     "Founders": [
       "Mark Zuckerberg",
       "Andrew McCollum",
@@ -96,6 +96,7 @@
       "Chris Hughes",
       "Dustin Moskovitz"
     ],
+    "Logo": "https://cdn.worldvectorlogo.com/logos/meta-1.svg",
     "Products": ["Facebook", "Instagram", "WhatsApp", "Oculus VR"],
     "MarketCap": "Over $900 billion",
     "Employees": "Approximately 58,600",
