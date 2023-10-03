@@ -39,7 +39,7 @@ GIF created with KAP
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+NA
 
 ## License
 
